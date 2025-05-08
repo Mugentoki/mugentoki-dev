@@ -14,5 +14,24 @@ export default defineNuxtConfig({
 
   typescript: {
     typeCheck: true
+  },
+
+  app: {
+    rootId: 'mugentoki',
+  },
+
+  components: [
+    {
+      path: '~/components',
+      pathPrefix: true,
+    },
+  ],
+
+  css: [
+    '~/assets/css/main.css',
+  ],
+
+  fonts: {
+    provider: 'bunny',
   }
 })

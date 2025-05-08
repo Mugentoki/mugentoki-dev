@@ -1,0 +1,44 @@
+html {
+    font-size: 62,5%; /* 1rem = 10px */
+    font-family: var(--font-family-base);
+    color: var(--color-5);
+}
+
+body {
+    font-size: var(--font-size-base);
+    line-height: 1.4;
+}
+
+h1 {
+    font-size: var(--font-size-xl);
+}
+
+h2 {
+    font-size: var(--font-size-lg);
+}
+
+h3 {
+    font-size: var(--font-size-md);
+}
+
+h4 {
+    font-size: var(--font-size-sm);
+}
+
+h5 {
+    font-size: var(--font-size-xs);
+}
+
+h6 {
+    font-size: var(--font-size-base);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 800;
+    line-height: 1.8;
+    margin: 0;
+}
+
+a {
+    color: var(--color-4);
+}
