@@ -38,4 +38,4 @@ jobs:
         run: npm run build
 
       - name: Deploy via rsync
-        run: rsync -avz --delete --exclude=".node-version" ./ ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_DESTINATION }}
+        run: which rsync && rsync -avz --delete --exclude=".node-version" ./ ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_DESTINATION }}
