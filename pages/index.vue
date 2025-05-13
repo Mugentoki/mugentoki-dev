@@ -1,6 +1,6 @@
 <template>
     <PageWrapper>
-        <h1>Index page</h1>
+        <h1>Index page reload</h1>
         <h2>Index page</h2>
         <h3>Index page</h3>
         <h4>Index page</h4>
