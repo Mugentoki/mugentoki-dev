@@ -37,5 +37,17 @@ jobs:
       - name: Build Nuxt3 App
         run: npm run build
 
-      - name: Deploy via rsync
-        run: which rsync && rsync -avz --delete --exclude=".node-version" ./ ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_DESTINATION }}
+      - name: Prepare deployment zip
+        run: zip -r deploy.zip .
+
+      - name: Upload deployment to server
+        run: scp deploy.zip ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_DESTINATION }}
+
+      - name: Unzip & deploy on server
+        run: |
+          ssh ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} << 'EOF'
+            cd ${{ secrets.SSH_DESTINATION }}
+            unzip -o deploy.zip
+            rm deploy.zip
+            npx pm2 start
+          EOF
