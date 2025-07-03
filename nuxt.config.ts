@@ -9,7 +9,8 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     '@nuxt/image',
     '@nuxt/scripts',
-    '@nuxt/test-utils'
+    '@nuxt/test-utils',
+    '@nuxtjs/tailwindcss'
   ],
 
   typescript: {
@@ -25,10 +26,6 @@ export default defineNuxtConfig({
       path: '~/components',
       pathPrefix: true,
     },
-  ],
-
-  css: [
-    '~/assets/css/main.css',
   ],
 
   fonts: {

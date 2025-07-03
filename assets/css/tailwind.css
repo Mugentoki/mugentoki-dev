@@ -1,0 +1,11 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "./base/theme-variables.css";
+@import "./base/typography.css";
+@import "./base/layout.css";
+@import "./base/transitions.css";
+
+@import "./components/cake.css";

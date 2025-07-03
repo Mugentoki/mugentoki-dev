@@ -1,0 +1,27 @@
+:root {
+    &,
+    &.realm-about {
+        --realm-primary-color: oklch(65.59% 0.165 49.55);
+    }
+
+    &.realm-web {
+        --realm-primary-color: oklch(34.19% 0.153 315.69);
+    }
+
+    &.realm-astronomy {
+        --realm-primary-color: oklch(66.80% 0.160 18.27);
+    }
+
+    &.realm-worldbuilding {
+        --realm-primary-color: oklch(49.83% 0.054 101.52);
+    }
+
+    &.realm-fractal {
+        --realm-primary-color: oklch(79.47% 0.113 236.48);
+    }
+}
+
+@theme {
+    --font-sans: 'Noto Sans JP', ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --color-realm-primary: var(--realm-primary-color);
+}
