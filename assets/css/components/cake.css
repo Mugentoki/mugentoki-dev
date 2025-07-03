@@ -1,7 +1,0 @@
-@layer components {
-    .cake-slice {
-        clip-path:polygon(50% 0%, 0% 100%, 100% 100%);
-        transform-origin: top center;
-        @apply absolute w-3/4 h-[51%] top-1/2 z-10 cursor-pointer;
-    }
-}
