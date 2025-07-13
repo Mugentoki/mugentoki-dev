@@ -1,10 +1,10 @@
 <template>
     <div class="relative w-full h-dvh overflow-hidden">
-        <div class="absolute z-20 flex wrap ">
+        <div class="absolute z-20 flex wrap flex-col lg:flex-row w-full lg:f-auto">
             <IndexRealmSelect id="about" title="About Me" />
-            <IndexRealmSelect id="web" title="Web Projects" />
-            <IndexRealmSelect id="astronomy" title="Astronomy Projects" />
-            <IndexRealmSelect id="worldbuilding" title="Worldbuilding Projects" />
+            <IndexRealmSelect id="web" title="Webdev" />
+            <IndexRealmSelect id="astronomy" title="Astronomy" />
+            <IndexRealmSelect id="worldbuilding" title="Worldbuilding" />
             <IndexRealmSelect id="fractal" title="Fractal Drift" />
         </div>
 
@@ -15,31 +15,31 @@
                 <Transition name="fade" mode="out-in">
                     <IndexRealmDescription realm="about">
                         <h1 class="text-3xl">Mugentoki</h1>
-                        <p>Some stuff about myself</p>
+                        <p>Some stuff about myself - needs something else background</p>
                     </IndexRealmDescription>
                 </Transition>
                 <Transition name="fade" mode="out-in">
                     <IndexRealmDescription realm="web">
                         <h2 class="text-3xl">Web Projects</h2>
-                        <p>Super cool web projects</p>
+                        <p>Super cool web projects - needs hologram background</p>
                     </IndexRealmDescription>
                 </Transition>
                 <Transition name="fade" mode="out-in">
                     <IndexRealmDescription realm="astronomy">
                         <h2 class="text-3xl">Astronomy</h2>
-                        <p>Spacy Astronomy projects</p>
+                        <p>Astronomy and astrophysics projects - needs space background</p>
                     </IndexRealmDescription>
                 </Transition>
                 <Transition name="fade" mode="out-in">
                     <IndexRealmDescription realm="worldbuilding">
                         <h2 class="text-3xl">Worldbuilding</h2>
-                        <p>Fantastic fantasy world building projects</p>
+                        <p>Fantastic fantasy world building projects - needs magical book background</p>
                     </IndexRealmDescription>
                 </Transition>
                 <Transition name="fade" mode="out-in">
                     <IndexRealmDescription realm="fractal">
                         <h2 class="text-3xl">Fractal Drift</h2>
-                        <p>Feel the randomness</p>
+                        <p>Feel the randomness - needs some glitch background</p>
                     </IndexRealmDescription>
                 </Transition>
             </div>
