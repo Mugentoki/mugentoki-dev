@@ -1,6 +1,6 @@
 <template>
-    <div class="relative w-full h-dvh overflow-hidden">
-        <div class="absolute z-20 flex wrap flex-col lg:flex-row w-full lg:f-auto">
+    <div class="relative w-full h-dvh flex lg:block flex-col overflow-hidden">
+        <div class="relative lg:absolute z-20 flex wrap flex-col lg:flex-row w-full lg:f-auto bg-black/50">
             <IndexRealmSelect id="about" title="About Me" />
             <IndexRealmSelect id="web" title="Webdev" />
             <IndexRealmSelect id="astronomy" title="Astronomy" />
@@ -8,10 +8,8 @@
             <IndexRealmSelect id="fractal" title="Fractal Drift" />
         </div>
 
-        <div
-            class="left-1/2 top-1/2 -translate-1/2 flex justify-center items-center relative
-            w-[80%] max-w-[650px] aspect-square rounded-full overflow-hidden z-20 shadow-[0px_0px_10px_7px_var(--realm-primary-color)] transition-shadow duration-500">
-            <div class="relative text-black z-30 bg-white/80 rounded-full w-full h-full flex justify-center items-center overflow-hidden text-center">
+        <div class="relative z-20 grow">
+            <div class="relative z-30 h-full text-center">
                 <Transition name="fade" mode="out-in">
                     <IndexRealmDescription realm="about">
                         <h1 class="text-3xl">Mugentoki</h1>
