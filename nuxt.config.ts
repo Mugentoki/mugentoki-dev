@@ -21,6 +21,10 @@ export default defineNuxtConfig({
     rootId: 'mugentoki',
   },
 
+  pinia: {
+    storesDirs: ['./app/stores/**'],
+  },
+
   components: [
     {
       path: '~/components',
@@ -30,5 +34,9 @@ export default defineNuxtConfig({
 
   fonts: {
     provider: 'bunny',
-  }
+  },
+
+  css: [
+    '~/assets/css/main.css',
+  ]
 })
