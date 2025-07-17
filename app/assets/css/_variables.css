@@ -34,6 +34,22 @@
     --color-tama-button-background: #16a085;
     --color-tama-button-text: #ffffff;
 
+    /* Breakpoints, just for me so I don't forget them */
+    --breakpoint-tablet: 768px;
+    --breakpoint-desktop: 1024px;
+
+    /* Spacings */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+
+    /* Border Radius */
+    --rounded-sm: 2px;
+    --rounded-md: 4px;
+    --rounded-lg: 8px;
+    --rounded-full: 9999px;
+
     /* Fonts Related */
     --font-family-sans: 'Noto Sans JP', 'Hiragino Kaku Gothic Pro', 'Meiryo', 'Yu Gothic', 'MS PGothic', sans-serif;
 }
