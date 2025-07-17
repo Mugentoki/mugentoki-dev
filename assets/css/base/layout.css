@@ -1,7 +1,0 @@
-html, body {
-    @apply w-full h-dvh bg-black;
-}
-
-#mugentoki {
-    @apply min-h-dvh;
-}
