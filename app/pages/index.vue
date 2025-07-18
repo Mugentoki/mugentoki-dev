@@ -10,32 +10,36 @@
             </ul>
         </nav>
         <div class="realm-description-wrapper">
-            <Transition>
+            <Transition name="slide-up">
                 <IndexRealmDescription v-show="realmStore.realm === 'gintoki'">
-                    <h1>Mugentoki</h1>
-                    <p>Welcome to my personal space on the web. Here, I share my interests</p>
-                    <p>Blah blah</p>
+                    <h1>Mugentoki<br> - <br>Web Developer & Astronomy Enthusiast</h1>
+                    <p>I'm a web developer with a unique background as an HVAC engineer. Very passionate about astronomy ans astrophysics (or science in general) and diverse other hobbies like worldbuilding / story telling.</p>
+                    <p>Feel free to clickedi click through this website and discover more about my work (and myself).</p>
+                    <CommonButtonContainer label="Navigate to About Me or Blog section">
+                        <NuxtLink to="/about">About Me</NuxtLink>
+                        <NuxtLink to="/blog">Blog</NuxtLink>
+                    </CommonButtonContainer>
                 </IndexRealmDescription>
             </Transition>
-            <Transition>
+            <Transition name="slide-up">
                 <IndexRealmDescription v-show="realmStore.realm === 'kagura'">
                     <h2>Web Development</h2>
                     <p>Blah blah</p>
                 </IndexRealmDescription>
             </Transition>
-            <Transition>
+            <Transition name="slide-up">
                 <IndexRealmDescription v-show="realmStore.realm === 'shinpachi'">
                     <h2>Astronomy</h2>
                     <p>Blah blah</p>
                 </IndexRealmDescription>
             </Transition>
-            <Transition>
+            <Transition name="slide-up">
                 <IndexRealmDescription v-show="realmStore.realm === 'tama'">
                     <h2>Worldbuilding</h2>
                     <p>Blah blah</p>
                 </IndexRealmDescription>
             </Transition>
-            <Transition>
+            <Transition name="slide-up">
                 <IndexRealmDescription v-show="realmStore.realm === 'sadaharu'">
                     <h2>Definitely Not Government Secrets</h2>
                     <p>Blah blah</p>

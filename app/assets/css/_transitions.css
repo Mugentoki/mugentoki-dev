@@ -1,0 +1,17 @@
+/* Transitions for VUE <Transition> */
+
+/* name="slide-up" */
+.slide-up-enter-active,
+.slide-up-leave-active {
+  transition: all 0.25s ease-in-out;
+}
+
+.slide-up-enter-from {
+  opacity: 0;
+  transform: translateY(100%) scale(0);
+}
+
+.slide-up-leave-to {
+  opacity: 0;
+  transform: translateY(-100%) scale(0);
+}

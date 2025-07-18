@@ -1,7 +1,6 @@
 <template>
     <button
         class="realm-select-button"
-        @mouseenter="setRealm(realm)"
         @click="setRealm(realm)"
     >
         <slot />
