@@ -23,7 +23,7 @@
     /* Variables for "Sadaharu" theme */
     --color-sadaharu-text: #000000;
     --color-sadaharu-background: #f5f6f6;
-    --color-sadaharu-accent: #581429;
+    --color-sadaharu-accent: #ad0b0b;
     --color-sadaharu-button-background: #d4a373;
     --color-sadaharu-button-text: #ffffff;
 
@@ -48,10 +48,29 @@
     --rounded-sm: 2px;
     --rounded-md: 4px;
     --rounded-lg: 8px;
+    --rounded-xl: 16px;
     --rounded-full: 9999px;
 
-    /* Fonts Related */
+    /* Font Families */
     --font-family-sans: 'Noto Sans JP', 'Hiragino Kaku Gothic Pro', 'Meiryo', 'Yu Gothic', 'MS PGothic', sans-serif;
+
+    /* Font Sizes */
+    --font-sm: 0.8rem;
+    --font-base: 1rem;
+    --font-xl: 1.25rem;
+    --font-2xl: 1.563rem;
+    --font-3xl: 1.953rem;
+    --font-4xl: 2.441rem;
+    --font-5xl: 3.052rem;
+
+    /* Line Heights */
+    --leading-sm: 1.2;
+    --leading-base: 1.5;
+    --leading-xl: 1.75;
+    --leading-2xl: 2;
+    --leading-3xl: 2.25;
+    --leading-4xl: 2.5;
+    --leading-5xl: 2.75;
 }
 
 :root,

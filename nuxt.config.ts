@@ -25,16 +25,24 @@ export default defineNuxtConfig({
     storesDirs: ['./app/stores/**'],
   },
 
+  fonts: {
+    provider: 'bunny',
+    defaults: {
+      weights: [100,200,300,400,500,600,700,800,900],
+      subsets: [
+        'latin',
+        'latin-ext',
+        'japanese'
+      ]
+    }
+  },
+
   components: [
     {
       path: '~/components',
       pathPrefix: true,
     },
   ],
-
-  fonts: {
-    provider: 'bunny',
-  },
 
   css: [
     '~/assets/css/main.css',
