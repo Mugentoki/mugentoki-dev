@@ -1,0 +1,39 @@
+body {
+    font-family: var(--font-family-sans);
+    font-size: var(--font-base);
+    line-height: var(--leading-base);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 800;
+    line-height: var(--leading-sm);
+    margin-block: var(--spacing-md);
+}
+
+h1 {
+    font-size: var(--font-5xl);
+}
+
+h2 {
+    font-size: var(--font-4xl);
+}
+
+h3 {
+    font-size: var(--font-3xl);
+}
+
+h4 {
+    font-size: var(--font-2xl);
+}
+
+h5 {
+    font-size: var(--font-xl);
+}
+
+h6 {
+    font-size: var(--font-base);
+}
+
+p {
+    margin-top: var(--spacing-md);
+}

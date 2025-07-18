@@ -9,7 +9,8 @@ export default defineNuxtConfig({
     '@nuxt/icon',
     '@nuxt/image',
     '@nuxt/scripts',
-    '@nuxt/test-utils'
+    '@nuxt/test-utils',
+    '@pinia/nuxt'
   ],
 
   typescript: {
@@ -18,6 +19,22 @@ export default defineNuxtConfig({
 
   app: {
     rootId: 'mugentoki',
+  },
+
+  pinia: {
+    storesDirs: ['./app/stores/**'],
+  },
+
+  fonts: {
+    provider: 'bunny',
+    defaults: {
+      weights: [100,200,300,400,500,600,700,800,900],
+      subsets: [
+        'latin',
+        'latin-ext',
+        'japanese'
+      ]
+    }
   },
 
   components: [
@@ -29,9 +46,5 @@ export default defineNuxtConfig({
 
   css: [
     '~/assets/css/main.css',
-  ],
-
-  fonts: {
-    provider: 'bunny',
-  }
+  ]
 })
