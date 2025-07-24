@@ -46,5 +46,14 @@ export default defineNuxtConfig({
 
   css: [
     '~/assets/css/main.css',
-  ]
+  ],
+
+  icon: {
+    customCollections: [
+      {
+        prefix: 'mugentoki',
+        dir: './assets/icons/mugentoki'
+      },
+    ],
+  },
 })

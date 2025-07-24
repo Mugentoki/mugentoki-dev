@@ -1,38 +1,11 @@
 :root {
-    /* Variables for "Gintoki" theme */
-    --color-gintoki-text: #ffffff;
-    --color-gintoki-background: #2c3e50;
-    --color-gintoki-accent: #e74c3c;
-    --color-gintoki-button-background: #3498db;
-    --color-gintoki-button-text: #ffffff;
-
-    /* Variables for "Kagura" theme */
-    --color-kagura-text: #ffffff;
-    --color-kagura-background: #ff6b6b;
-    --color-kagura-accent: #ffeaa7;
-    --color-kagura-button-background: #ff8787;
-    --color-kagura-button-text: #ffffff;
-
-    /* Variables for "Shinpachi" theme */
-    --color-shinpachi-text: #ffffff;
-    --color-shinpachi-background: #3498db;
-    --color-shinpachi-accent: #ffffff;
-    --color-shinpachi-button-background: #2980b9;
-    --color-shinpachi-button-text: #ffffff;
-
-    /* Variables for "Sadaharu" theme */
-    --color-sadaharu-text: #000000;
-    --color-sadaharu-background: #f5f6f6;
-    --color-sadaharu-accent: #ad0b0b;
-    --color-sadaharu-button-background: #d4a373;
-    --color-sadaharu-button-text: #ffffff;
-
-    /* Variables for "Tama" theme */
-    --color-tama-text: #ffffff;
-    --color-tama-background: #1abc9c;
-    --color-tama-accent: #ff99cc;
-    --color-tama-button-background: #16a085;
-    --color-tama-button-text: #ffffff;
+    /* Colors */
+    --color-background-page: 20 100% 3%;
+    --color-background-dark: 23 100% 5%;
+    --color-background: 23 100% 14%;
+    --color-background-light: 23 100% 24%;
+    --color-border: 27 32% 43%;
+    --color-text: 38 11% 81%;
 
     /* Breakpoints, just for me so I don't forget them */
     --breakpoint-tablet: 768px;
@@ -71,45 +44,12 @@
     --leading-3xl: 2.25;
     --leading-4xl: 2.5;
     --leading-5xl: 2.75;
+
+    /* Transitions */
+    --transition-speed-default: 0.3s;
 }
 
-:root,
-:root.gintoki {
-    --color-text: var(--color-gintoki-text);
-    --color-background: var(--color-gintoki-background);
-    --color-accent: var(--color-gintoki-accent);
-    --color-button-background: var(--color-gintoki-button-background);
-    --color-button-text: var(--color-gintoki-button-text);
-}
-
-:root.kagura {
-    --color-text: var(--color-kagura-text);
-    --color-background: var(--color-kagura-background);
-    --color-accent: var(--color-kagura-accent);
-    --color-button-background: var(--color-kagura-button-background);
-    --color-button-text: var(--color-kagura-button-text);
-}
-
-:root.shinpachi {
-    --color-text: var(--color-shinpachi-text);
-    --color-background: var(--color-shinpachi-background);
-    --color-accent: var(--color-shinpachi-accent);
-    --color-button-background: var(--color-shinpachi-button-background);
-    --color-button-text: var(--color-shinpachi-button-text);
-}
-
-:root.sadaharu {
-    --color-text: var(--color-sadaharu-text);
-    --color-background: var(--color-sadaharu-background);
-    --color-accent: var(--color-sadaharu-accent);
-    --color-button-background: var(--color-sadaharu-button-background);
-    --color-button-text: var(--color-sadaharu-button-text);
-}
-
-:root.tama {
-    --color-text: var(--color-tama-text);
-    --color-background: var(--color-tama-background);
-    --color-accent: var(--color-tama-accent);
-    --color-button-background: var(--color-tama-button-background);
-    --color-button-text: var(--color-tama-button-text);
+:root.light {
+    --color-background: #772e00;
+    --color-text: #f3ece1;
 }
