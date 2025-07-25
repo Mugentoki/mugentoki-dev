@@ -1,8 +1,11 @@
 <template>
     <div class="page-home">
-        <CommonUiContainer>
+        <UiDialogContainer>
             <p>Hello test</p>
-        </CommonUiContainer>
+        </UiDialogContainer>
+        <UiContentContainer>
+            <p>Content goes here</p>
+        </UiContentContainer>
     </div>
 </template>
 

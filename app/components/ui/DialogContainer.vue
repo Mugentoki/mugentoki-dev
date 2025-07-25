@@ -1,15 +1,15 @@
 <template>
-    <div class="ui-container">
+    <div class="ui-dialog-container">
         <slot />
-        <Icon class="ui-container-corner top-left" name="pixelarticons:command" />
-        <Icon class="ui-container-corner top-right" name="pixelarticons:command" />
-        <Icon class="ui-container-corner bottom-left" name="pixelarticons:command" />
-        <Icon class="ui-container-corner bottom-right" name="pixelarticons:command" />
+        <Icon class="ui-dialog-container__corner top-left" name="pixelarticons:command" />
+        <Icon class="ui-dialog-container__corner top-right" name="pixelarticons:command" />
+        <Icon class="ui-dialog-container__corner bottom-left" name="pixelarticons:command" />
+        <Icon class="ui-dialog-container__corner bottom-right" name="pixelarticons:command" />
     </div>
 </template>
 
 <style lang="css">
-    .ui-container {
+    .ui-dialog-container {
         border: 2px solid hsl(var(--color-border));
         border-radius: var(--rounded-md);
         padding: var(--spacing-md);
@@ -24,32 +24,32 @@
         overflow: hidden;
     }
 
-    .ui-container-corner {
+    .ui-dialog-container__corner {
         position: absolute;
         color: hsl(var(--color-border));
 
         &.top-left {
             top: 0;
             left: 0;
-            transform: translate(-25%, -25%);
+            transform: translate(-33%, -33%);
         }
 
         &.top-right {
             top: 0;
             right: 0;
-            transform: translate(25%, -25%);
+            transform: translate(33%, -33%);
         }
 
         &.bottom-left {
             bottom: 0;
             left: 0;
-            transform: translate(-25%, 25%);
+            transform: translate(-33%, 33%);
         }
 
         &.bottom-right {
             bottom: 0;
             right: 0;
-            transform: translate(25%, 25%);
+            transform: translate(33%, 33%);
         }
     }
 </style>

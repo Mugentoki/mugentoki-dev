@@ -6,6 +6,10 @@
     --color-background-light: 23 100% 24%;
     --color-border: 27 32% 43%;
     --color-text: 38 11% 81%;
+    --color-text-inverted: 38 11% 20%;
+
+    /* Background Images */
+    --content-container-background-image: url('/images/oldpaper.webp');
 
     /* Breakpoints, just for me so I don't forget them */
     --breakpoint-tablet: 768px;
