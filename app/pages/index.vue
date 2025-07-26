@@ -1,7 +1,13 @@
 <template>
     <div class="page-home">
         <UiDialogContainer>
-            <p>Hello test</p>
+            <UiSelect isMenu>
+                <UiSelectItem><button>About Me</button></UiSelectItem>
+                <UiSelectItem><button>Web Development</button></UiSelectItem>
+                <UiSelectItem><button>Astronomy</button></UiSelectItem>
+                <UiSelectItem><a href="#">World Building</a></UiSelectItem>
+                <UiSelectItem><button>Government Secrets</button></UiSelectItem>
+            </UiSelect>
         </UiDialogContainer>
         <UiContentContainer>
             <p>Content goes here</p>

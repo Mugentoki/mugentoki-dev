@@ -8,8 +8,9 @@
     --color-text: 38 11% 81%;
     --color-text-inverted: 38 11% 20%;
 
-    /* Background Images */
+    /* Images */
     --content-container-background-image: url('/images/oldpaper.webp');
+    --content-pixelsword-image: url('/images/pixelsword.webp');
 
     /* Breakpoints, just for me so I don't forget them */
     --breakpoint-tablet: 768px;

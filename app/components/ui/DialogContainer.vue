@@ -12,7 +12,8 @@
     .ui-dialog-container {
         border: 2px solid hsl(var(--color-border));
         border-radius: var(--rounded-md);
-        padding: var(--spacing-md);
+        padding-inline: var(--spacing-lg);
+        padding-block: var(--spacing-md);
         background:
             linear-gradient(to top,     hsl(var(--color-background-dark)) -4px, transparent 10px) top,
             linear-gradient(to bottom,  hsl(var(--color-background-dark)) -4px, transparent 10px) bottom,
