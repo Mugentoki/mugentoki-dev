@@ -36,18 +36,24 @@ const { pressed } = defineProps<{
         border: 1px solid white;
         position: relative;
         z-index: 2;
+        animation: breath 2s infinite;
 
-        &:before {
-            content: '';
-            position: absolute;
-            z-index: 1;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            border-radius: var(--rounded-full);
-            border: 1px solid rgb(0, 217, 255);
-            animation: pulse-animation 0.8s ease-in-out infinite,
-                delay-animation 4.8s linear infinite;
+
+    }
+
+    &.pressed {
+        .ui-press-enter__icon {
+            &:before {
+                content: '';
+                position: absolute;
+                z-index: 1;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: var(--rounded-full);
+                border: 1px solid rgb(102, 181, 255);
+                animation: pulse 0.8s ease-in-out 1;
+            }
         }
     }
 }
