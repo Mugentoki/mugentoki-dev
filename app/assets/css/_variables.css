@@ -1,16 +1,12 @@
 :root {
     /* Colors */
-    --color-background-page: 20 100% 3%;
+    --color-background-page: 231 90% 3%;
     --color-background-dark: 23 100% 5%;
     --color-background: 23 100% 14%;
     --color-background-light: 23 100% 24%;
     --color-border: 27 32% 43%;
     --color-text: 38 11% 81%;
     --color-text-inverted: 38 11% 20%;
-
-    /* Images */
-    --content-container-background-image: url('/images/oldpaper.webp');
-    --content-pixelsword-image: url('/images/pixelsword.webp');
 
     /* Breakpoints, just for me so I don't forget them */
     --breakpoint-tablet: 768px;
@@ -30,7 +26,7 @@
     --rounded-full: 9999px;
 
     /* Font Families */
-    --font-family-sans: 'Noto Sans JP', 'Hiragino Kaku Gothic Pro', 'Meiryo', 'Yu Gothic', 'MS PGothic', sans-serif;
+    --font-family-sans: ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, 'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri, source-sans-pro, sans-serif;
 
     /* Font Sizes */
     --font-sm: 0.8rem;

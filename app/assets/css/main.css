@@ -1,6 +1,8 @@
 @import url("_reset.css");
 @import url("_variables.css");
 @import url("_transitions.css");
+@import url("_animations.css");
+@import url("_utilities.css");
 @import url("_typography.css");
 @import url("_layout.css");
 @import url("_page.css");
