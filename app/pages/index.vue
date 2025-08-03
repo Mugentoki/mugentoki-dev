@@ -47,12 +47,39 @@ const showTitleScreen = ref(true);
 const feedbackButtonPress = ref(false);
 
 function switchScreen() {
+    unmountSwitchScreenEvents();
+
     feedbackButtonPress.value = true;
 
     setTimeout(() => {
         showTitleScreen.value = false;
     }, 1000);
 }
+
+function handleKeyDownEnter(event: KeyboardEvent) {
+    if (event.key === 'Enter') {
+        switchScreen();
+    }
+}
+
+function handleClickAnywhere() {
+    switchScreen();
+}
+
+function unmountSwitchScreenEvents() {
+    window.removeEventListener('keydown', handleKeyDownEnter);
+    window.removeEventListener('click', handleClickAnywhere);
+}
+
+onMounted(() => {
+    window.addEventListener('keydown', handleKeyDownEnter);
+
+    window.addEventListener('click', handleClickAnywhere);
+});
+
+onBeforeUnmount(() => {
+    unmountSwitchScreenEvents();
+});
 </script>
 
 <style lang="css">
