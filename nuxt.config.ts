@@ -10,7 +10,8 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/scripts',
     '@nuxt/test-utils',
-    '@pinia/nuxt'
+    '@pinia/nuxt',
+    '@nuxtjs/device'
   ],
 
   typescript: {
@@ -46,5 +47,20 @@ export default defineNuxtConfig({
 
   css: [
     '~/assets/css/main.css',
-  ]
+  ],
+
+  icon: {
+    size: '1.563rem',
+    customCollections: [
+      {
+        prefix: 'mugentoki',
+        dir: './assets/icons/mugentoki'
+      },
+    ],
+  },
+
+  image: {
+    quality: 80,
+    format: ['webp']
+  }
 })
