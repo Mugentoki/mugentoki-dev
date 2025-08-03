@@ -1,7 +1,7 @@
 html {
     color: hsl(var(--color-text));
     transition: color var(--transition-speed-default) ease-in-out, background-color var(--transition-speed-default) ease-in-out;
-    background-color: hsl(var(--color-background-page));
+    background-color: hsl(var(--color-background));
     /*
     Image just for testing purposes, remove when not needed
     background-image: url(https://i.pinimg.com/736x/a2/ee/b7/a2eeb79fce5fb7a57ec3cb15ef521dc8.jpg);

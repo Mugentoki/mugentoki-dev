@@ -7,7 +7,8 @@
     </ul>
     <h2>Icons</h2>
     <ul>
-        <li><a href="https://icon-sets.iconify.design/line-md/" target="_blank">Material Line Icons by Vjacheslav Trushkin</a></li>
+        <li><a href="https://icon-sets.iconify.design/uil/" target="_blank">Unicons Icons by Iconscout</a></li>
+        <li><a href="https://icon-sets.iconify.design/carbon/" target="_blank">Carbon Icons by IBM</a></li>
     </ul>
     <h2>Images</h2>
     <ul>

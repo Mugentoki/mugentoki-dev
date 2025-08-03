@@ -1,12 +1,8 @@
 :root {
     /* Colors */
-    --color-background-page: 231 90% 3%;
-    --color-background-dark: 23 100% 5%;
-    --color-background: 23 100% 14%;
-    --color-background-light: 23 100% 24%;
-    --color-border: 27 32% 43%;
-    --color-text: 38 11% 81%;
-    --color-text-inverted: 38 11% 20%;
+    --color-background: 231 90% 3%;
+    --color-text: 219 100% 90%;
+    --color-ui-primary: 219 70.7% 50.4%;
 
     /* Breakpoints, just for me so I don't forget them */
     --breakpoint-tablet: 768px;
@@ -26,7 +22,7 @@
     --rounded-full: 9999px;
 
     /* Font Families */
-    --font-family-sans: ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, 'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri, source-sans-pro, sans-serif;
+    --font-family-sans: ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, Calibri, source-sans-pro, sans-serif;
 
     /* Font Sizes */
     --font-sm: 0.8rem;
@@ -45,6 +41,11 @@
     --leading-3xl: 2.25;
     --leading-4xl: 2.5;
     --leading-5xl: 2.75;
+
+    /* Font Weights */
+    --weight-thin: 300;
+    --weight-normal: 400;
+    --weight-bold: 700;
 
     /* Transitions */
     --transition-speed-default: 0.3s;

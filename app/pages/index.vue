@@ -8,12 +8,31 @@
                         <p>Web Developer & Game Design Newbie</p>
                     </hgroup>
                 </div>
-                <UiPressEnter :pressed="!tmp" />
+                <UiPressEnter :pressed="feedbackButtonPress" />
             </div>
         </Transition>
         <Transition name="hide-title-screen">
             <div v-show="!showTitleScreen" class="main-menu-screen">
-                <h2>This is menu</h2>
+                <nav>
+                    <ul>
+                        <li>
+                            <UiMainMenuItem to="/about">About Me</UiMainMenuItem>
+                        </li>
+                        <li>
+                            <UiMainMenuItem to="/projects">Web Development</UiMainMenuItem>
+                        </li>
+                        <li>
+                            <UiMainMenuItem to="/contact">Game Design</UiMainMenuItem>
+                        </li>
+                        <li>
+                            <UiMainMenuItem to="/contact">Now</UiMainMenuItem>
+                        </li>
+                        <li>
+                            <UiMainMenuItem to="/contact">Settings</UiMainMenuItem>
+                        </li>
+                    </ul>
+                </nav>
+                <UiTurbulenceFilter />
             </div>
         </Transition>
     </div>
@@ -25,11 +44,14 @@ definePageMeta({
 });
 
 const showTitleScreen = ref(true);
-const tmp = ref(true);
+const feedbackButtonPress = ref(false);
 
 function switchScreen() {
-    //showTitleScreen.value = false;
-    tmp.value = !tmp.value;
+    feedbackButtonPress.value = true;
+
+    setTimeout(() => {
+        showTitleScreen.value = false;
+    }, 1000);
 }
 </script>
 
@@ -47,7 +69,7 @@ function switchScreen() {
 }
 
 .title-screen,
-.hide-title-screen {
+.main-menu-screen {
     position: absolute;
 }
 
@@ -55,7 +77,8 @@ function switchScreen() {
     z-index: 5;
 }
 
-.hide-title-screen {
+.main-menu-screen {
     z-index: 10;
+    text-align: center;
 }
 </style>

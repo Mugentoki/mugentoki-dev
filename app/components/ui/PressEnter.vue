@@ -33,7 +33,7 @@ const { pressed } = defineProps<{
         display: flex;
         padding: var(--spacing-sm);
         border-radius: var(--rounded-full);
-        border: 1px solid white;
+        border: 1px solid hsl(var(--color-ui-primary));
         position: relative;
         z-index: 2;
         animation: breath 2s infinite;
@@ -51,7 +51,7 @@ const { pressed } = defineProps<{
                 left: 50%;
                 transform: translate(-50%, -50%);
                 border-radius: var(--rounded-full);
-                border: 1px solid rgb(102, 181, 255);
+                border: 1px solid hsl(var(--color-ui-primary));
                 animation: pulse 0.8s ease-in-out 1;
             }
         }

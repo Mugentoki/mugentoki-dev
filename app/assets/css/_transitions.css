@@ -15,6 +15,6 @@
 
 .hide-title-screen-leave-to {
   opacity: 0;
-  transform: scale(2);
-  filter: blur(5px)
+  transform: scaleY(2);
+  filter: blur(5px);
 }
