@@ -6,8 +6,8 @@
         <div v-else class="ui-press-enter__icon">
             <Icon name="carbon:touch-1" />
         </div>
-        <p v-if="$device.isDesktop">Press Enter or click anywhere to continue</p>
-        <p v-else>Tap anywhere to continue</p>
+        <p v-if="$device.isDesktop">{{ $t('Press Enter or click anywhere to continue') }}</p>
+        <p v-else>{{ $t('Tap anywhere to continue') }}</p>
     </div>
 </template>
 

@@ -4,8 +4,8 @@
             <div v-show="showTitleScreen" class="title-screen">
                 <div class="visually-hidden">
                     <hgroup>
-                        <h1>Alex "Mugentoki" Berger</h1>
-                        <p>Web Developer & Game Design Newbie</p>
+                        <h1>{{ $t('Alex "Mugentoki" Berger') }}</h1>
+                        <p>{{ $t('Web Developer & Game Design Newbie') }}</p>
                     </hgroup>
                 </div>
                 <UiPressEnter :pressed="feedbackButtonPress" />
@@ -16,19 +16,19 @@
                 <nav>
                     <ul>
                         <li>
-                            <UiMainMenuItem to="/about">About Me</UiMainMenuItem>
+                            <UiMainMenuItem to="/about">{{ $t('About Me') }}</UiMainMenuItem>
                         </li>
                         <li>
-                            <UiMainMenuItem to="/projects">Web Development</UiMainMenuItem>
+                            <UiMainMenuItem to="/projects">{{ $t('Web Development') }}</UiMainMenuItem>
                         </li>
                         <li>
-                            <UiMainMenuItem to="/contact">Game Design</UiMainMenuItem>
+                            <UiMainMenuItem to="/contact">{{ $t('Game Design') }}</UiMainMenuItem>
                         </li>
                         <li>
-                            <UiMainMenuItem to="/contact">Now</UiMainMenuItem>
+                            <UiMainMenuItem to="/contact">{{ $t('Now') }}</UiMainMenuItem>
                         </li>
                         <li>
-                            <UiMainMenuItem to="/contact">Settings</UiMainMenuItem>
+                            <UiMainMenuItem to="/contact">{{ $t('Settings') }}</UiMainMenuItem>
                         </li>
                     </ul>
                 </nav>
@@ -39,10 +39,6 @@
 </template>
 
 <script setup lang="ts">
-definePageMeta({
-    layout: 'landing'
-});
-
 const showTitleScreen = ref(true);
 const feedbackButtonPress = ref(false);
 
