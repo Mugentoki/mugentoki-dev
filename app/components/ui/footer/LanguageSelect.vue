@@ -7,7 +7,7 @@
             aria-controls="footer-language-menu"
             :aria-expanded="languageMenuOpen"
             @click="toggleLanguageMenu"
-            ref="languageButtonRef"
+            ref="togglebutton"
         >
             <Icon name="iconoir:language" />
         </button>
@@ -25,8 +25,10 @@
                     class="footer-language-select__list-item"
                     :class="{ 'is-active': isCurrentLocale(locale.code) }"
                     role="menuitem"
+                    ref="languages"
+                    :data-locale="locale.code"
                 >
-                    <button @click="setLocale(locale.code)">{{ locale.name }}</button>
+                    <button @click="selectLocale(locale.code)">{{ locale.name }}</button>
                 </li>  
             </ul>
         </Transition>
@@ -34,24 +36,41 @@
 </template>
 
 <script setup lang="ts">
+import type { LocaleObject } from '@nuxtjs/i18n';
+
     const { locale, locales, setLocale } = useI18n()
 
     const languageMenuOpen = ref(false)
 
-    console.log(locale);
+    const languageRefs = useTemplateRef('languages');
+    const toggleButtonRef = useTemplateRef('togglebutton');
 
     const toggleLanguageMenu = () => {
         languageMenuOpen.value = !languageMenuOpen.value;
 
-        if (languageMenuOpen.value) {
-            // focus the current active button
-        } else {
-            // focus the language menu toggle button
+        // If the language menu is closed, focus the toggle button.
+        if (!languageMenuOpen.value) {
+            toggleButtonRef.value?.focus()
+            return
         }
+
+        // Check the current selected locale and focus the corresponding button.
+        const activeButton = languageRefs.value
+            ?.find((ref: any) => ref.dataset.locale === locale.value)
+            ?.querySelector('button')
+
+        if (!activeButton) return
+
+        nextTick(() => activeButton.focus())
     }
 
     const isCurrentLocale = (code: string) => {
         return locale.value === code;
+    }
+
+    const selectLocale = (code: 'en' | 'de' | 'ja') => {
+        setLocale(code);
+        toggleLanguageMenu();
     }
 </script>
 

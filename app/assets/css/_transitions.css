@@ -21,9 +21,9 @@
 
 /* name="slidexy" */
 .slidexy-enter-active {
-  animation: slidexy-in 0.5s;
+  animation: slidexy-in 0.3s;
 }
 
 .slidexy-leave-active {
-  animation: slidexy-out 0.5s;
+  animation: slidexy-out 0.3s;
 }
