@@ -80,8 +80,7 @@ onBeforeUnmount(() => {
 
 <style lang="css">
 .page-home {
-    min-height: calc(100dvh - 2 * var(--spacing-md));
-    max-height: calc(100dvh - 2 * var(--spacing-md));
+    flex-grow: 1;
     width: 100%;
     display: flex;
     flex-direction: column;

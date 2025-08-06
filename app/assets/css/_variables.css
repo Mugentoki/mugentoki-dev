@@ -13,6 +13,7 @@
     --spacing-sm: 8px;
     --spacing-md: 16px;
     --spacing-lg: 24px;
+    --spacing-xl: 32px;
 
     /* Border Radius */
     --rounded-sm: 2px;
@@ -20,6 +21,12 @@
     --rounded-lg: 8px;
     --rounded-xl: 16px;
     --rounded-full: 9999px;
+
+    /* Borders */
+    --default-ui-border-width: 2px;
+    --default-ui-border-color: hsl(var(--color-ui-primary));
+    --default-ui-border-style: solid;
+    --default-ui-border: var(--default-ui-border-width) var(--default-ui-border-style) var(--default-ui-border-color);
 
     /* Font Families */
     --font-family-sans: ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, Calibri, source-sans-pro, sans-serif;

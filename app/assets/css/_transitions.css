@@ -18,3 +18,12 @@
   transform: scaleY(2);
   filter: blur(5px);
 }
+
+/* name="slidexy" */
+.slidexy-enter-active {
+  animation: slidexy-in 0.5s;
+}
+
+.slidexy-leave-active {
+  animation: slidexy-out 0.5s;
+}
