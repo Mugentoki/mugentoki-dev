@@ -16,4 +16,14 @@
 </template>
 
 <script setup lang="ts">
+// currently not working, debug and fix
+definePageMeta({
+  i18n: {
+    paths: {
+      en: '/credits',
+      de: '/danksagung',
+      ja: '/kurejito'
+    }
+  }
+})
 </script>

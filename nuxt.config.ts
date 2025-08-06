@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
-  devtools: { enabled: true },
+  devtools: { enabled: false },
 
   modules: [
     '@nuxt/eslint',
@@ -11,20 +11,24 @@ export default defineNuxtConfig({
     '@nuxt/scripts',
     '@nuxt/test-utils',
     '@pinia/nuxt',
-    '@nuxtjs/device'
+    '@nuxtjs/device',
+    '@nuxtjs/i18n',
   ],
-
-  typescript: {
-    typeCheck: true
-  },
 
   app: {
     rootId: 'mugentoki',
   },
 
-  pinia: {
-    storesDirs: ['./app/stores/**'],
-  },
+  components: [
+    {
+      path: '~/components',
+      pathPrefix: true,
+    },
+  ],
+
+  css: [
+    '~/assets/css/main.css',
+  ],
 
   fonts: {
     provider: 'bunny',
@@ -38,16 +42,19 @@ export default defineNuxtConfig({
     }
   },
 
-  components: [
-    {
-      path: '~/components',
-      pathPrefix: true,
+  i18n: {
+    restructureDir: 'app/i18n',
+    langDir: 'locales',
+    locales: [
+      { code: 'en', name: 'English', file: 'en.json' },
+      { code: 'de', name: 'Deutsch', file: 'de.json' },
+      { code: 'ja', name: '日本語', file: 'ja.json' }
+    ],
+    defaultLocale: 'en',
+    detectBrowserLanguage: {
+      fallbackLocale: 'en',
     },
-  ],
-
-  css: [
-    '~/assets/css/main.css',
-  ],
+  },
 
   icon: {
     size: '1.563rem',
@@ -62,5 +69,13 @@ export default defineNuxtConfig({
   image: {
     quality: 80,
     format: ['webp']
-  }
+  },
+
+  pinia: {
+    storesDirs: ['./app/stores/**'],
+  },
+
+  typescript: {
+    typeCheck: true
+  },
 })
