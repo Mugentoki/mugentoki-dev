@@ -38,40 +38,49 @@
 <script setup lang="ts">
 import type { LocaleObject } from '@nuxtjs/i18n';
 
-    const { locale, locales, setLocale } = useI18n()
+const { locale, locales, setLocale } = useI18n()
 
-    const languageMenuOpen = ref(false)
+const languageMenuOpen = ref(false)
 
-    const languageRefs = useTemplateRef('languages');
-    const toggleButtonRef = useTemplateRef('togglebutton');
+const languageRefs = useTemplateRef('languages');
+const toggleButtonRef = useTemplateRef('togglebutton');
 
-    const toggleLanguageMenu = () => {
-        languageMenuOpen.value = !languageMenuOpen.value;
+const toggleLanguageMenu = () => {
+    languageMenuOpen.value = !languageMenuOpen.value;
 
-        // If the language menu is closed, focus the toggle button.
-        if (!languageMenuOpen.value) {
-            toggleButtonRef.value?.focus()
-            return
+    // If the language menu is closed, focus the toggle button.
+    if (!languageMenuOpen.value) {
+        toggleButtonRef.value?.focus()
+        return
+    }
+
+    // Check the current selected locale and focus the corresponding button.
+    const activeButton = languageRefs.value
+        ?.find((ref: any) => ref.dataset.locale === locale.value)
+        ?.querySelector('button')
+
+    if (!activeButton) return
+
+    nextTick(() => activeButton.focus())
+}
+
+const isCurrentLocale = (code: string) => {
+    return locale.value === code;
+}
+
+const selectLocale = (code: 'en' | 'de' | 'ja') => {
+    setLocale(code);
+    toggleLanguageMenu();
+}
+
+onMounted(() => {
+    // when clicking outside the menu, close it
+    document.addEventListener('click', (event) => {
+        if (languageMenuOpen.value && event.target instanceof HTMLElement && !event.target?.closest('.footer-language-select')) {
+            toggleLanguageMenu();
         }
-
-        // Check the current selected locale and focus the corresponding button.
-        const activeButton = languageRefs.value
-            ?.find((ref: any) => ref.dataset.locale === locale.value)
-            ?.querySelector('button')
-
-        if (!activeButton) return
-
-        nextTick(() => activeButton.focus())
-    }
-
-    const isCurrentLocale = (code: string) => {
-        return locale.value === code;
-    }
-
-    const selectLocale = (code: 'en' | 'de' | 'ja') => {
-        setLocale(code);
-        toggleLanguageMenu();
-    }
+    });
+});
 </script>
 
 <style lang="css">

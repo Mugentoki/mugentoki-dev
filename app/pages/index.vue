@@ -53,12 +53,22 @@ function switchScreen() {
 }
 
 function handleKeyDownEnter(event: KeyboardEvent) {
+    if (event.target instanceof HTMLElement &&
+        (event.target?.tagName === 'BUTTON' || event.target?.closest('button'))) { 
+            return;
+    }
+
     if (event.key === 'Enter') {
         switchScreen();
     }
 }
 
-function handleClickAnywhere() {
+function handleClickAnywhere(event: MouseEvent) {
+    if (event.target instanceof HTMLElement &&
+        (event.target?.tagName === 'BUTTON' || event.target?.closest('button'))) { 
+            return;
+    }
+    
     switchScreen();
 }
 
