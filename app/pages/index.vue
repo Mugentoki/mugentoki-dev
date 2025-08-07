@@ -54,7 +54,11 @@ function switchScreen() {
 
 function handleKeyDownEnter(event: KeyboardEvent) {
     if (event.target instanceof HTMLElement &&
-        (event.target?.tagName === 'BUTTON' || event.target?.closest('button'))) { 
+        (event.target?.tagName === 'BUTTON'
+        || event.target?.closest('button')
+        || event.target?.tagName === 'A'
+        || event.target?.closest('a'))
+    ) { 
             return;
     }
 
@@ -65,7 +69,11 @@ function handleKeyDownEnter(event: KeyboardEvent) {
 
 function handleClickAnywhere(event: MouseEvent) {
     if (event.target instanceof HTMLElement &&
-        (event.target?.tagName === 'BUTTON' || event.target?.closest('button'))) { 
+        (event.target?.tagName === 'BUTTON'
+        || event.target?.closest('button')
+        || event.target?.tagName === 'A'
+        || event.target?.closest('a'))
+    ) { 
             return;
     }
     
