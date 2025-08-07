@@ -2,6 +2,29 @@
     <div class="layout-wrapper">
         <slot />
         <div class="layout-footer">
+            <UiFooterSocialLink
+                href="https://github.com/Mugentoki"
+                :title="$t('Mugentoki on GitHub')"
+                iconName="logos:github-icon"
+                :inverted="true"
+            />
+            <UiFooterSocialLink
+                href="https://mastodon.social/@mugentoki"
+                :title="$t('Mugentoki on Mastodon')"
+                iconName="logos:mastodon-icon"
+            />
+            <UiFooterSocialLink
+                href="https://www.instagram.com/mugentoki"
+                :title="$t('Mugentoki on Instagram')"
+                iconName="logos:instagram-icon"
+                :inverted="true"
+            />
+            <UiFooterSocialLink
+                href="https://www.linkedin.com/in/berger-alex"
+                :title="$t('Alex Berger on LinkedIn')"
+                iconName="logos:linkedin-icon"
+                :last="true"
+            />
             <UiFooterLanguageSelect />
         </div>
     </div>

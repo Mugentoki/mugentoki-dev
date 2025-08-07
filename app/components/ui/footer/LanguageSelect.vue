@@ -8,6 +8,8 @@
             :aria-expanded="languageMenuOpen"
             @click="toggleLanguageMenu"
             ref="togglebutton"
+            :aria-label="$t('Language select')"
+            :title="$t('Language select')"
         >
             <Icon name="iconoir:language" />
         </button>
