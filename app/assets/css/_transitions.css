@@ -1,0 +1,29 @@
+/* Transitions for VUE <Transition> */
+
+/* name="hide-title-screen" */
+.hide-title-screen-enter-active {
+  transition: all 0.25s ease-in-out;
+}
+
+.hide-title-screen-leave-active {
+  transition: all 0.25s ease-in-out;
+}
+
+.hide-title-screen-enter-from {
+  opacity: 0;
+}
+
+.hide-title-screen-leave-to {
+  opacity: 0;
+  transform: scaleY(2);
+  filter: blur(5px);
+}
+
+/* name="slidexy" */
+.slidexy-enter-active {
+  animation: slidexy-in 0.3s;
+}
+
+.slidexy-leave-active {
+  animation: slidexy-out 0.3s;
+}

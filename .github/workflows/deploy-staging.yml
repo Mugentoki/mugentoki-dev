@@ -11,6 +11,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Install rsync
+        run: sudo apt-get update && sudo apt-get install -y rsync
+    
+      - name: Install SSH Key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          known_hosts: ${{ secrets.SSH_HOST }}
+
+      - name: Adding Known Hosts
+        run: ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+    
       - name: Checkout code
         uses: actions/checkout@v4
 
@@ -25,15 +37,16 @@ jobs:
       - name: Build Nuxt3 App
         run: npm run build
 
-      - name: Install SSH Key
-        uses: shimataro/ssh-key-action@v2
-        with:
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          known_hosts: 'just-a-placeholder-so-we-dont-get-errors'
+      - name: Prepare deployment zip
+        run: zip -r deploy.zip .
 
-      - name: Adding Known Hosts
-        run: ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+      - name: Upload deployment to server
+        run: scp deploy.zip ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_DESTINATION }}
 
-      - name: Deploy via rsync
-        run:
-          rsync -avz --delete --exclude=".node-version" ./ ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_DESTINATION }}
+      - name: Unzip & deploy on server
+        run: |
+          ssh ${{ secrets.SSH_USERNAME }}@${{ secrets.SSH_HOST }} << 'EOF'
+            cd ${{ secrets.SSH_DESTINATION }}
+            unzip -o deploy.zip
+            rm deploy.zip
+          EOF

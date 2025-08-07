@@ -1,0 +1,64 @@
+:root {
+    /* Colors */
+    --color-background: 231 90% 3%;
+    --color-text: 219 100% 90%;
+    --color-ui-primary: 219 70.7% 50.4%;
+
+    /* Breakpoints, just for me so I don't forget them */
+    --breakpoint-tablet: 768px;
+    --breakpoint-desktop: 1024px;
+
+    /* Spacings */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+
+    /* Border Radius */
+    --rounded-sm: 2px;
+    --rounded-md: 4px;
+    --rounded-lg: 8px;
+    --rounded-xl: 16px;
+    --rounded-full: 9999px;
+
+    /* Borders */
+    --default-ui-border-width: 2px;
+    --default-ui-border-color: hsl(var(--color-ui-primary));
+    --default-ui-border-style: solid;
+    --default-ui-border: var(--default-ui-border-width) var(--default-ui-border-style) var(--default-ui-border-color);
+
+    /* Font Families */
+    --font-family-sans: ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, Calibri, source-sans-pro, sans-serif;
+
+    /* Font Sizes */
+    --font-sm: 0.8rem;
+    --font-base: 1rem;
+    --font-xl: 1.25rem;
+    --font-2xl: 1.563rem;
+    --font-3xl: 1.953rem;
+    --font-4xl: 2.441rem;
+    --font-5xl: 3.052rem;
+
+    /* Line Heights */
+    --leading-sm: 1.2;
+    --leading-base: 1.5;
+    --leading-xl: 1.75;
+    --leading-2xl: 2;
+    --leading-3xl: 2.25;
+    --leading-4xl: 2.5;
+    --leading-5xl: 2.75;
+
+    /* Font Weights */
+    --weight-thin: 300;
+    --weight-normal: 400;
+    --weight-bold: 700;
+
+    /* Transitions */
+    --transition-speed-default: 0.3s;
+}
+
+:root.light {
+    --color-background: #772e00;
+    --color-text: #f3ece1;
+}
